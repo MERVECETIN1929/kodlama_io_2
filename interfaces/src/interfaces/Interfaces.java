@@ -1,0 +1,12 @@
+package interfaces;
+
+public class Interfaces {
+
+    public static void main(String[] args) {
+        ICustomerDal customerDal=new OracleCustomerDal();
+        CustomerManager customerManager=new CustomerManager(new SqlServerCustomerDal());
+        customerManager.add();
+        
+    }
+
+}
